@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RadioGroup
+        android:id="@+id/radioheot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radiohl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hl" />
+
+        <RadioButton
+            android:id="@+id/radiodis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dis" />
+
+        <RadioButton
+            android:id="@+id/radiohealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health" />
+
+        <RadioButton
+            android:id="@+id/radioin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in" />
+    </RadioGroup>
+
+</ScrollView>

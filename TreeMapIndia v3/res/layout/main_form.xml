@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_withoutimage"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/devid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Spinner
+                android:id="@+id/et_ward"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="10"
+                android:hint="@string/ward_no" />
+
+            <Spinner
+                android:id="@+id/et_poly"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="10"
+                android:hint="@string/Poly_no" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/sp_ptype"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/layoutPrivateProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/et_oname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/o_name"
+                        android:nextFocusForward="@+id/et_pdesc"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_pdesc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pdesc"
+                        android:nextFocusForward="@+id/et_suno"
+                        android:singleLine="true" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/et_suno"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/suno"
+                        android:nextFocusForward="@+id/et_hno"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_hno"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/hno"
+                        android:nextFocusForward="@+id/et_area"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/et_area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/area"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/stt"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/txtTrack"
+                    android:textColor="#ffffff"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/add_tree"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/txtAddTree"
+                    android:textColor="#ffffff"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/listSessions"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="@string/txtListSessions"
+                    android:textColor="#ffffff"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/exda"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/txtExport"
+                    android:textColor="#ffffff"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/txtExit"
+                    android:textColor="#ffffff"
+                    tools:ignore="ButtonStyle" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atha.treemapindia"
+    android:versionCode="5"
+    android:versionName="0.2.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.atha.treemapindia.googlemapslib.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.atha.treemapindia.googlemapslib.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.apps.mytracks.READ_TRACK_DATA" />
+    <uses-permission android:name="com.google.android.apps.mytracks.WRITE_TRACK_DATA" />
+    <uses-permission android:name="com.google.android.apps.mytracks.TRACK_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/final_logo"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.atha.treemapindia.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.atha.treemapindia.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.atha.treemapindia.ListSessionsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.atha.treemapindia.Survey_form"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <receiver
+            android:name="com.atha.gps.MyTracksReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.mytracks.TRACK_STARTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.mytracks.TRACK_STOPPED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.atha.treemapindia.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.atha.treemapindia.ListTreesInSessionActivity"
+            android:label="@string/title_activity_list_trees_in_session"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.atha.treemapindia.ViewTreeDetailActivity"
+            android:label="@string/title_activity_view_tree_detail"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

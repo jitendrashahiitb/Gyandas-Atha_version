@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|left"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/chktg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tg" />
+
+            <CheckBox
+                android:id="@+id/chkposter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poster" />
+
+            <CheckBox
+                android:id="@+id/chknails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nails" />
+
+            <CheckBox
+                android:id="@+id/chkwires"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wires" />
+
+            <CheckBox
+                android:id="@+id/chkmnone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/none" />
+
+            <CheckBox
+                android:id="@+id/chkmother"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ot_or" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/r_or"
+            android:visibility="gone" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+</ScrollView>
